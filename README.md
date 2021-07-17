@@ -1,2 +1,2 @@
-# go-web-app
-Go, Docker Compose
+# go web-app
+A demo webapp written in Go
