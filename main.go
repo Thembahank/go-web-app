@@ -22,7 +22,7 @@ func main() {
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
 
-	Title := "Terramino"
+	Title := "GO DEMO"
 	MyPageVariables := PageVariables{
 		PageTitle: Title,
 	}

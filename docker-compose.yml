@@ -1,14 +1,11 @@
-version: "2"
+version: "3.7"
 services:
   app:
-    image: golang:1.6.1-alpine
+    build: .
+    image: go_app
+    container_name: go_app
     volumes:
-      - .:/go/src/go-with-compose
-    working_dir: /go/src/go-with-compose
+      - .:/app:z
+    ports:
+      - "8080:8080"
     command: go run main.go
-    links:
-      - redis
-    environment:
-      REDIS_URL: redis:6379
-  redis:
-    image: redis:alpine
